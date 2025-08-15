@@ -4,13 +4,11 @@
 
 #include <memory>
 #include <string>
-#include <vector>
 #include <unordered_map>
 using namespace std;
 
 struct Trie_node {
-    char val;
-    bool endWord;
+    bool endWord = false;
     unordered_map<char, Trie_node*> children;
 
 };
@@ -28,18 +26,21 @@ public:
 
     bool startsWith(string word);
 
-    bool erase(string word);
+    void erase(string word);
+
+    string longestCommonPrefix();
 
 
 private:
 
     Trie_node* root;
 
+    Trie_node* findNode(string word);
 
+    void clear(Trie_node* node);
+
+    bool erase(Trie_node* currentNode, string word, int depth);
 };
-
-
-
 
 
 #endif
