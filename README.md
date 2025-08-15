@@ -8,7 +8,7 @@ To insert a word into the Trie you need to simply call the insert() function wit
 
 To find out what the longest prefix shared by all words in the trie is, you simpyl need to call the longestCommonPrefix method on the Trie object and It will return the string of the longest common prefix or an empty string if there is not shared prefix.
 
-
+To see these in action please run main.ccp
 
 
 Walkthrough Part 2: Anatomy of Trie class
